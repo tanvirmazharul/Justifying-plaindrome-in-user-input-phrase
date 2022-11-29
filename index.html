@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cxkHHhLlQ7yQ-AyaGEOqlsw244ai-untEjxqzsIoI-Ubw0528nUDhkuROxuvs0wH47gQ-uRBUBdgyYpVheyF8-bTBDdLhmRE86KQIyNjVuxTPJMQTdgO3WEzwoXs05DFDM5_4V90Tw4rLTQTZyf-UsNq3giX9FA-hEc4j2l28K7IhR4X-CTFH6gMj2O_WJXzYsVSWKkdSr14wTE1UWmnAbHzlVo7vNW6l8DTnmDNO3pAO0RzCDC4PSW8UN_kn02UqYpEIibTOhqFB49OxX_jP8cmyN43Yizf7y0pkiOA6IPL9TNOXDCxb7AeX4QFQ3ylQsIGs012rlbxF4J0B07_suiL2XctZCVW5tCawlOw1mxc6S1LnMI9Kao-QMZulmBoGhsZrMecN_xw6mvMqP5niJdyDNS97cYFeLHMHgIs05rlWB6sq7WCEnHn7FZW_68cYgvchL4rPlQ6Wlt1ryM0LpoogD4s9ZZ0kzRXDX8byLwE0upVrkxdRZubpe_YQjyyUv1xuegmp7dCmTzizwXtEJPZRH6THcxlTlTz9raUIEEXh0Vms4Dw7gd4kGFNWHXfeQ51YZLQq_t7rKzX3atDC0p0uDmrPoLRnk1E3fRlrCgExgJyd3h_L_2EMjHjmXPSR9Bq2oIEq5eOIQ4gNX6AmbdbK_ZDAxM7dVPoC3PDauQHlMdO4rpww4d9y6rxr-iGFjiDwlZOYqmK2H2q3LybUuPZMENKc72RYUwcTsGtGQ0VbeaLbdDKjh9AWwAkaLVyf6YOzv39pWq8Is053cP23s3AN7hoULObwGyMX2uB_B_aU_RhR9eSBJt82y5VPmHkv_SHgbx0u3ygz59KYt1ps5JG-R8YH8CtCV6s2MdHMrrPHFCr07vBhwjSltlGrrhMhOr0dkrYj2643QP0e9Ba92uOBl_ZAYaX6CnaIzRqAYmYKfxmgu0WCHWmsDakKl9rESH26ghwjDmuKHGTJE2AhJ9LwSeBNs-eD2b3f9HPzaWb7F71seu9tTLOMXckH57mr79nGvEIN_JVRdVyBw2DeC1C-l6oLhDttk4mBj6pZUwkh3VISVnWrgNBtMmFi1zwpVgSQ9G_tR7CsI9Hauu8aq1RnUOHWVOnxLZaDPCJLhmYD59zLpW0sEQbNUSnkQ83sScKvJipRz-yE144vzIxWINm7bSPEVo_175WXMbFfbirQiXPGGy-zB5RNvyXKJEsklZ7WO4s_RzzgXRL4u-v30Mz84dIyAxR24I0gxa5cBi3TWHrlP062y71hJk4wl6waFMfcxaky_QDordKUXVgm-QHAG_5XFhxJ8pBcSKaW1tXUamEwW5-Iha5xATXQe1TvVMXD6Vz-t_1g3tmZJSrnJftRXo9FX3Is_DLG7XeozM2X5LIIw6yLNRAiEawkqMUXHazv_DMia4DQEVUQ3Oqr3tAbsX5cK4FY6Fx5Up2t9qdwDeVSMvWpgoCYHTLU3_wGY_VAmL2smD_7oMJPtPzLCIbO9Fv7njnfMkWit72ZXNjNi_uJgdOuDOmiwGCB0jbNMv8LZX7Vpk1XtNEALf87fOa1-53X1nN04C0O2U_BNo" nonce="d6f3a2e79276693de9c1956c352f0bcd" charset="UTF-8"></script></head>
+<body>
+    <label for="word">Input a Word</label>
+    <input type="text" name="word" id="word">
+    <input type="button" value="Check" onclick="check_word()">
+    <p id="results"></p>
+
+    <script>
+        function check_word(){
+            var Word=document.getElementById("word").value;
+            var word=Word;
+            Word=Word.toLowerCase();
+            
+            let length=Word.length-1;
+            for (let i=0;i<=length;i++){
+               
+                if (Word[i]!=Word[length-i]){
+                    document.getElementById("results").innerHTML=(word+" is NOT palindrome.");
+
+                    break
+                }else if (i==length){
+                    document.getElementById("results").innerHTML=(word+" is palindrome.");
+
+                }
+
+            }
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>
